@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Example Instagram</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header-container">
+        <div class="d-flex justify-content-between align-items-center p-3 border-bottom">
+            <div class="d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-instagram me-2" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                </svg>
+                <span class="fw-bold fs-5">Instagram</span>
+            </div>
+            <div>
+                <button class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#createPostModal">Crear Post</button>
+        <div class="modal fade" id="createPostModal" tabindex="-1" aria-labelledby="createPostModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="createPostModalLabel">Crear Post</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 d-flex justify-content-center align-items-center border">
+                                    <img src="https://3.bp.blogspot.com/-ufXByPQWHUw/U6Mwd0tk16I/AAAAAAACO0Q/txt2eIYlGQg/s1600/bosque+junto+al+lago+lake+and+forest.jpg" alt="Preview" class="img-fluid">
+                                </div>
+                                <!-- Contenido de la derecha -->
+                                <div class="col-md-6">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="postCaption" class="form-label">Escribe un pie de foto</label>
+                                            <textarea class="form-control" id="postCaption" rows="5" placeholder="Escribe algo..."></textarea>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="postTags" class="form-label">Etiquetas</label>
+                                            <input type="text" class="form-control" id="postTags" placeholder="Añade etiquetas">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary w-100">Publicar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="settingsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear me-1" viewBox="0 0 16 16">
+                <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.292-.159a1.873 1.873 0 0 0-2.692 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.693-1.115l-.291.16c-.764.415-1.6-.42-1.184-1.185l.159-.291a1.873 1.873 0 0 0-1.116-2.693l-.318-.094c-.835-.246-.835-1.428 0-1.674l.319-.094a1.873 1.873 0 0 0 1.115-2.693l-.16-.291c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.116l.094-.318z"/>
+            </svg>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="settingsDropdown">
+            <li><a class="dropdown-item" href="#">Perfil</a></li>
+            <li><a class="dropdown-item" href="#">Privacidad</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+                <a class="dropdown-item text-danger d-flex align-items-center" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right me-2" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6.364 13.5a.5.5 0 0 1-.5-.5v-2.5H1.5a.5.5 0 0 1 0-1h4.364V7H1.5a.5.5 0 0 1 0-1h4.364V3.5a.5.5 0 0 1 .5-.5h7.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5H6.364z"/>
+                        <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 1 0-.708l2-2a.5.5 0 0 1 .708.708L12.707 8l1.855 1.854a.5.5 0 0 1-.708.708l-2-2z"/>
+                    </svg>
+                    Cerrar sesión
+                </a>
+            </li>
+        </ul>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center my-3">
+        <!-- Botón de vista de cuadrícula -->
+        <button id="gridViewBtn" class="btn btn-outline-primary me-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid" viewBox="0 0 16 16">
+                <path d="M6 1H1v5h5V1zM6 10H1v5h5v-5zM15 1h-5v5h5V1zM15 10h-5v5h5v-5z"/>
+            </svg>
+        </button>
+    
+        <!-- Botón de vista en cascada -->
+        <button id="listViewBtn" class="btn btn-outline-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path d="M3 4.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1 0-1zm0 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1 0-1zm0 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1 0-1z"/>
+            </svg>
+        </button>
+    </div>
+    <div id="postsContainer" class="d-flex flex-wrap grid-view">
+        <div class="post border">
+            <header class="d-flex justify-content-between align-items-center p-2">
+                <span class="fw-bold">Globos</span>
+                <span class="text-muted">01/01/2025</span>
+            </header>
+            <img src="https://2.bp.blogspot.com/-Oz2bx4ugdpo/VQzbulOs46I/AAAAAAACi6M/jLgEdvD0e64/s1600/Campos%2Bde%2Blavanda%2Bcon%2Bglobos.jpg" alt="Post 1" class="img-fluid">
+            <footer class="p-2">
+                <p><strong>200.000 likes</strong><br>Inserte contenido de 4geeks para poder rellenar este espacio y no tener que escribir un post diferente por cada imagen</p>
+            </footer>
+        </div>
+        <div class="post border">
+            <header class="d-flex justify-content-between align-items-center p-2">
+                <span class="fw-bold">Título de la Foto</span>
+                <span class="text-muted">01/01/2025</span>
+            </header>
+            <img src="https://2.bp.blogspot.com/_EZ16vWYvHHg/S79tDYAX1bI/AAAAAAAAJ2w/Do2kAV8FCIE/s1600/www.BancodeImagenesGratuitas.com-FAP-17.jpg">
+            <footer class="p-2">
+                <p><strong>200.000 likes</strong><br>Inserte contenido de 4geeks para poder rellenar este espacio y no tener que escribir un post diferente por cada imagen</p>
+            </footer>
+        </div>
+        <div class="post border">
+            <header class="d-flex justify-content-between align-items-center p-2">
+                <span class="fw-bold">Título de la Foto</span>
+                <span class="text-muted">01/01/2025</span>
+            </header>
+            <img src="https://3.bp.blogspot.com/-tcb1UL2M3So/U3zj4eaKYjI/AAAAAAACND0/lazS68SNa5A/s1600/las-fotos-mas-lindas-y-hermosas-de-internet-fondos-y-wallpapers-gratis-para-compartir-imagenes-gratis+(7).jpg" alt="Post 1" class="img-fluid">
+            <footer class="p-2">
+                <p><strong>200.000 likes</strong><br>Inserte contenido para rellenar este espacio.</p>
+            </footer>
+        </div>
+        <div class="post border">
+            <header class="d-flex justify-content-between align-items-center p-2">
+                <span class="fw-bold">Título de la Foto</span>
+                <span class="text-muted">01/01/2025</span>
+            </header>
+            <img src="data:image/webp;base64,UklGRswlAABXRUJQVlA4IMAlAABwmACdASoVAbkAPp1CmUklo6ImLJgcUMATiWMAx2rzGEF47KTy/SJT5+qP+/9PD1a86JuvvrsUtPLG5d4tem+KFkf7S9TXw/zuds/7V4kH7fvCvXeY7fH/fec/2q6IP+/4+/37/rewZ/Uv9F6x3/H5Tv2/fP/vR7Jf7aofh+73DnmERXgOA87X/58sQDnaFIhSCKbn5ZJ/cBCGeov+n0SidTlISWtR0wXXiv4kbC6Z7Uv6Gf93LSURW/BPQBHlbslCwFPGOycSTSTcHFb3f5jakd5dLr24Bs2N8yALTNjIQYIwkgUeMomi0d5T45C43WlLMIIj75knlpU0O1cXjgqBC4iQif1LWvwNkSVBiuTa0KVlIq4Vh2V4IR3jW3Dp2A/MmJ1H7DA+XFPn8bHmHTkmlBNcl5jDgWZROzDQGDDjb/oE5iowLSLlHD+gAjaU0pQgCluvcjez7YjCI7fi2zm/V+EDFyQ8dfd/n85+hJWX+5CErIv2rUxgUPgdjcVuqMXKeTROwGvSwSM0P+FVByyqEehNowyhGuO73ok2TC97QFKMcQYCNvWbwVxljgUW24amBzX0pMrIO6ZDJSLGKl7lspzT6sDF/vbcFTbug/ipGAixt+Rpqa+JBeoI1M4heY5vSpxiqTYWq6CGvYSP2RH2RN5GOrBxzzrJX+Aw/PxUb4unqO60tm0XgHyDK/fWWNV/ftQDboMWKlkGkrnyDsOXpF/7xc8mKttbZtiVqvNI3N8U2mRcLv9HPutCT0LWDoSypZeZcjWckoQju9V+ZGXLwJiZZjtzqHhqal5PA0jVGlox5LX3BaULFVSCZFIJKps2BHw2uC/9D3z6IGfRV7YHPCBaysxsBL2/NkGcPSpXQ/nlqJ7pOqfD95/zxVGXyMf2tIbQ4VcTV8bRIBs500yXc/w42i5NMa5Pz1OJUA5PdImpg/ruhOE3NpLG+r5UKVHjiNTf58iaXJTAwyH9CQdCspVesaZaIikEEyxMkPXw90gW/onrFqDsEHu5FR2nHqxWP+kG6fv8MzDHweAGtcDaB2Cd3cbMf7jeWWYMwT6kSft5faWInOQzXYo8BVfrv+wqKi9Kc1rHrea/AconNfvXTfuokwaYMjtWk3jbVtrD64hotPXLIjY9Qp0noPL7Xr6Js+sF0cI329SIMe7OZXE2jjjAoIQ4OFHweNl+2sbHba+G67iwTQlrX4htfsb28o3RTgjDQ48/OPRnioKxbwm1wIAk86U50/7HK9sjP5SOOj7GKnqe740p1kpNqDqmNfa0NCsm54gilqotRKgTvXHV22bz+v+lVvSdjyV4XJVHnw9sNBQ2sAMJvPU27ej7SdI8JM5VXPW2mtABGEjw7U13p90Hfsvy/FwD7Z/qXQXAeUT5gDqy7xPcYZarwTp0QJEfxj+fgqh5GGwKO99vJuGFdRJA/8v2mU9CydzAfmKNGpaurFRd4zl6ap0wVXmcBx82FmRqwg14fjGuiUu1wXUmkjDJ49k8lhNEDm1QkE6KS+4qo6pEZdC73P69JUBbCZuOtRF/eP7sWBRXhQ6aup1aQpTqh1yNcp6E7D+dN/7Y4fPHsdauTfz1XElT0RmdeGr7ZyMp4cntN/FbD9vcAB6/zkiZAR9AC1oa017AAP6e3wqGb84iC8DTMqWY4yO/okL/+A+a/2BeX+vud+Jyw/gExRrMGy37tjpwB05X44AjpESFpZQm7WEjPIyzGhGO5Ifc44XtFsxVzj7IW0UsSwkmTcLVsE5U8JylQpey+Sh6WQWuW8sqWduf87uHN9Z7rIhDQfSbchIu9gu/hAuYmBuB0rml1zNIU05zrNdJr+W/uSNXWS/AsSjLh06uZ8zZAc9DISZtQU0OtZ1ck4sdR+fito+l+RQcQDrX1MXstPCoxdQS48TYgnzMVQHWHhw9ggL+zR0kSMlKbQIA9MQvBmIOq2fYSbQ72uvLLNUlPVCFHwEabsjS/L8jYnEiucHY0DLqkf3zmD56153RKVYkU2vor4QWqIGAktLtPRGmGRanFiT2cWLKXBWbdDSeuoVhOVM0NDmJvdrlYzA+gzJjz8dV8hIO/gUuBDhFrFth99HOn4hxmOUHbBL6b78hp+KDD1XTGvICdHELmk4GjH3c9IFcwKY0HA8dMvKK89HWvHYmTycNaNQkg9RIvijiOw5fcFEAvqViA3GFEyouPilACUgF9mi0vKUpZC7mavmAdqF+7BDCNJrh98Ge7efuOU/8vWR4pp27V+AFnuTcl5/1g88M6/F/LnOzSElhqvfvGb/rj7SGJ2twC86wf+L1sffZPX6gDn977c6+9gAuDZv+OzC3uBq/JhhcwoUqEyexgF2MmgwuF+tk2llY8jEVTuRdnoFqBWbpAWvqZEMiBb+LADhH/NIIGXz0CrGM/t/OLgnIyzl7pUbCcMwwG3cHwR8KrveCv7u5OFfqLDZHMwYenNNkpLSpiFDDh5d7Csy/xbf3Oy3AL4kKxkUJefuH0/xao7uzNvmRUFx8Kpb1/cuLDRsBmSQeCJx3W9uiB2gqLZJACsrWtCx3abuNDYrhIGYTVSzhvE0qwG4zG8JMvQ54jwX0KQuBkwrINNR3Od2o1hOCS7krcyC/Y9bE9VnzKCT6UfcDny91d1m9/MObdJN6Kdr5A/P8QqyM72Sn+9CjvF4RQP1/lFjrKJaIg8o1g92Y/Te0vY4WDIXuaM0cChl0KuSOUV0wlB2AULRL/FgVggD6E++YQTM3EFWEeOFGGxL5AuUOJs+XdDH72JZ+ybz5ydjjIBqujbTEtAuHDqafSRERBMDC1UJHp7N/d6aY2Kv+Y4tcNSyt3DSYY7RDg59Q4Y/Io1xyBLp3/w9IAFVuY1bvwoIpRwA8oGZGJEwx8FX78JMA8YGDEOwPPGR3NcyF9t66UboJ9f32Hl4LYOObh7uQmO9JVGIku2npRTetGSt9p94q0Lxgskt/e0qObz56kW6XBj2FWaEVb9zeKO72MDaMmToDy6v+UpsPXYciURABlaRdip8LfH0I/So9XmcidRy8PPcuwkVR0by0wuXHWmkioAAAWfTHRp/kV5oZCGFDf1iCm3WbP1f8ZFyxAE+6r5NcJLolhxFXEe9g51hX8ElvwEuwG3nh5A6M6+bm9l1xcVVrC1/XMcxLGeUn4qLgy/jIv9NpGvXkpAF52L6AQ5802IPleg72MIiTqqK3r5/gJLOztZa4I+S3FVu4Vw8ukHGA6oDoDZRCNr2Wz6b+ksmmoBh3NnEMz5dBVzKp94VKB9jI7kw6lnwp350grQXwALMTVPzCyBJYsPh851MzPfg65cNV2vf0Qvm0dphIKwxSUKk6WFoAgZVk9DlSxy2y/ya0JMCc5pf6xfSy3odwyG8fjykm1+g2iP9BDqx89+s6RURyj/fA9Y6IXUHGrpfdTUKqn9BZ2jWeu518EhMRM1czc4gJgn7TKIK/fRxphGEcQIETv0Z7nMav+O6I1Ws4RIRER4QN8adYN6ylpAkbZ/EOfpe9q9l0JLgAZXDOK9eBtMdi/LXXl6zXRH5rug9jdAbdzFQcvHZH7vPH0q7E3YRJVIsFzRGvAKiTc3SNIvF0PQwc7eAgnKuyOT4kHQLUp6iL/5sS9OfVzcrL+8N54pfXGC/jZZrt84CxviLxdgXkd6QQ4O7Es40YXidI2egE2GCqD16pZecnXxecny0Ap9+05VQswZg7DoMXgAcj6WsxViww4eumBxW/BxsDECZJ+KpZox3XtRljnDJuF3kEzjiyBvU6qYWeBt+2wdwDz0vDEGhtvuZSiUDV0AsW7uPzG3yP4dJVi4eRLJcWpF/R4KaLzhoddCSqno98Omn8+DXoH1MgxY6Enf1NhYD9RaIfBOCug1ZvvkCK2nMD4cs8J05CQPf6L4DrlL1n3Vrnub84R1aJnBbB/2eOBgU+pEuKJy3uyLs2IwDNCdpsFV600C7SAjG2uZrN6xLeRsyutImAHv4zxkEp+uXY22JwkZORTSsPlc4FjnlRaQ7hCAU7F5jQV1yHeANxbs+1FnJ43LUAxDDGuy/kqzfhI1oWYInBWuStXNcIE989T09EmpX9QFRbnTeZSa4n9gq5z2AbU87ulMdxmWJg3ROVKsBKlJK0yjsXuptAPxEHcNqDUsTfhWsUuFgaqRUSn81vII0nqnPOj1zOhpbxC1PVnv3IRAQ6meQkTg87ldSK3HHiBQYBmNVrkjW5xr0giQuhQzpflPRrczxH8Uvqw7LJtYRraVhbGJf7HbxiFjn3hZqTVhQ/0LU/2pCUjRwTlBxOPXLQnEF+zb49biROvdkjdLU9YAGM3H17RhrJuCKc+HECScOo5MYCv9jVmHUFTVLoOM5qyS1x82vWB21c6eYhJS6XNu0ipuDKljd0N8yxU5ixl1JDKBG1a8JwLdnyylETAoRZ970+i8kHTnyZNSb+nXitkDa73cikcO2C0RR5qSKGXpUr3lBZ0eh5sMkOMKmzDP2UItl3Zy0av0DrdO7GpDV3sSvGx24uZwGFgbJTIPnp2wUmpi7OFWlOFLjsW6EiHDBH2oH0FLI5iiSGs25IaZyRd0NMaNny2trZQNHaeVU3SQ8Gb8eZSTgACHyen+f6Zx7xNGf3iiP99XAvFeThuSAcWXoR+Rb+x/FQjgv9yFG8cYtbA+9ujypNL/TYmuVYMh6n1fF/jTymespxeY5bCub25omBOIli5572IOYnid7mBguNIxeq6KKWxhSLtvXAcdAtrZ6cBOwm4yw0dI9WueDYe3YEpWiK8BgWqwjYfW+hw73EfxAPahNCBkYHfTo728sB+h6cefCFz3Rfsxz7u7SdbZC68XyxgV219XxFlBKSGFcevunpRnSU2PXOpqcveT6HulHDXsh2IxgFGGl6oQY/0h5+ZX45B2RtbLATOiOaYbIhjxyaJwDObhkbu7hIZ1FD6W+BtgacCzl2A0IsGRQMK20GEEGCLlBhjTF+bV3raF4UjxEmW72YOn6eVrtaCS84vqzkwhQkhdLysuYPN/f4trMYZIajfjG96QR4Bf4Rq04xGQx+0qM1ddvfByrU0R0S3TaCaBd8Lb838rQJV12MGxWbeGFmtWLnkHAgr1LMxe8b5BY2a4mSVMFG6c4Ohw2AQ2rnLbavWXh3nQrjOSZAA1ykniB5x5w9mqKRGGqWO+FTU+t4Sn8L6Qrl3QWIh3FRvvAKCOxVmQjZaMPQ55S/FoWHAs/3ntZVU711aJyKHMzXVcYXoiDMhMD1CMBKxB5RkuakX68kkmAhuS4vNLPJqO4GFiwVv58gVNq+xgimTiW2R7YmeRveV1WjzmAEC6i/pRkusAe5AgMzao6MzCAEPnixNwx64VS8CwLAG3HtmuydvCAPdGs6pnKCV74K4gecqByeKCoBbBYntsZn+R/IKnjQbmkFgLwAaNoCtXlbUIMwfLfLO3cXlHtYCVzDWihYizZnR/yema60Pqazmtq8JvFrTUdRtcCUr/ONQPQV5lbTnNEpFgRcDcQik4WCuvHt0EAoreCLToZ2F+whOFxuDjgOz5H56+qNdSG7ha1QzjqG6jiTHfDdwD2roPYpsck3avw49mfAg7lzEZ3Rr+oBkkNrJLlJQ59qFQ0xE55csAf1tK/D9Qc/ngu8iRaacEFtDY/M5MUf2eLnXYqgDA6hoyicTRfN3b30gowFANqDl4wh9KL0vsReIRLiDhUWp8hBc5IWx9NcFTLTfSZ6dfRitq2jLOFoiK0OSmf2xmtrg3HUgLLo2yudT84l+3qiDug6t3/OFiLQNNEZRDDPYxZvAJ3TE4D+aedfFWxwO5UAElcqSEjCjPUvcs+1tu/upvprAvk/vwQOz5d2iAIdYedK7a3OMy7HeIf8zCEG0j6mUgAHBmAudqVhqcUo2ET04wNnRdMZf+q38Scp8twrwaormy1Q6LsbGfsksKqH7mdfQGk6CYzzahcFW713i1me7PLVpJmWkuVAsH/X8GWlpcvA5pTD5j2VI2NmzDd0qrZH0IDIGf4zgNQPUq1l3xsXHnSouAay52op0HPSkxIULEe0PQE+6/OEMC04hw9/xdOTNxcL3blk8rqT/OUu5FGbtAbhVwUAq+/qXT7/lU6BwYfLo78DpUtV1rPgSZZkv1iCON/2HOK5tzDv5b+LrBgKfMaIfZPlFK5zvye0Z/oZUItrm1vRhy8w/vs7lBsVr9qQenPeLl4sb4Gx8u/HY1khUi37vOyzt7kd9kE4bBv95J3+XxOZZHS3e8h+OhrOdtzm1FzojuEinFL8gCHJIQLM4knmt7nR7+sN5ETTPsOg6UDNAQtELfSzezm0FQYJ2WUbV0DPEO01rW/t/AYKptE0ff8RJlQ191vZSFqj7VUIaRxiAosE2TJF55q5+E9e+xRZskgsSbLK5RB0ko2OqmHlcj+JJFbKFE1IMuFk/ducW5HFsnqgQhwo7tD0f35TV8zQ+CssXZzj7nBlq+SXXOtVPEZqlBUXR8KHPBRvT+NITyrqBSFxw7efeF+WTgsu+cNfSo/VRaQ39uGr88xqVhk2Axe5Bt822NsnPV+X6FSCJFR3MfBJXFnP0EGpjDGbWMzTSzJd6vOg3QWPXmFOynzq7Ak7IfYR5nK2CSDBUMmgsGHJICIPxFFyroXAnkDLfp9vuU7fONxU7iYWLLSyTW3gtm7LcD0+/J9L1+EQP6atCyPY1P2mEbJAHAZGbtH97DksFT+cyzqdV4I5txDGjDK1Z/JUo7yqDhiMUgu2j2Xbo8FWcfbW2TCNq3UEwFPUtmxU4SUejur0pI+4ISWgsENZvD30bvEhVHgMcPbZfLYBz3mj+kEW5w/iUHnN/utPaEA273MPlO88eIJC0ZL984j4lhXN9N0LAU7lDWsb2TWxuaXDNX8WUdmqAKyFt27VOa9h+cQbR1y9WlAZN6NhvfdcqA1mj7hu96H9Vu4d9qntkgQZ6tIwObOOcD86yt9gOPYo8THS6yw5grr9Oy7dD/vCGncT++uCukqNqx1ys27C4ykVshEq4XLWa0Ufl1MckV++kagbbCiKIgkPqwXkJwqsqyhFElzBqdibOk/HsAyj8uQkhahgBJ/QSJKmt8DS4eLAuTkdmhxXx/7TkUxBQk+gHW4RRlVbBWa7v8qlkJmcun83wcN+BLvAFjqrZFT5XYRtZZqRXJpQ/gR01eopExSu4+0F5Zy/ofboF8K98CQM162Kl0lrLEHV7Nx7+vF0R2dLeBVMN/6/4fAxp73JIPeVNVGOMBQZwA2II0pnLwHZ+rITaz6e3SZ2z0+3guuJKp3aCNIDL7LR4oBtAEiVQu68iRSRa1RmP/O+N+JT3HH9lgGt0f2NpdHjVSEPEEdGsXBakqjX/XOKUw0+xi/4ja6IrxtGB2ZPm0dGpUtl/6wUlWji6/P+WsH2i6FVk1eN1hWbC/HelKUMD/AgC6cnMW31xUU/tuY94w+dfYHA0CcfocpeAjM3oVWtZLjzTTFMEO6/Oz6XsxPiBWci3bvRAsdPGufgsLtIH/YaFVxapTblvua7qWYLBHmHEmjUryBLntnpQNIlzrFfhxZ/Pw/Ll6Sx657DD3zipg+hvH070SGLh8jk3iNnE10pWF+7u+RX94Gs5GSvoty3u5qLOty6bF19DI5uTbrND2g5yc+N1d3oLSF/YvJ/gaf8pVQGfiaIhV/QdzPvErOegQO1zu9skJCcg0Yna3tySDTKaW38zPqg5SkA1W1GmMn+Xv6SKBXWPxPZI9fgJvPTEKGYGySPmjjHHM/BD5/wffxq5NixXy0+SSxjQI0/CHWd+E3xDSzpeSqhxuh4V1othIUL8u3BmzUebk4+NCAeP88zsZCU2Vkmv2Wy5TvozGIpfNn6vBcFf+yLgdDI3mwEefwb31cOVBLS6dh5vPp4+kAt4UeMvVc/kM63b0rAlk50SML8XDIp/xbc6D8+rzIE0L/66Ha8746niI4a4kKSyQey+Py/esiA3PI2yED873ihVGU4z3dUjKZ+WaYhcRxXqCxBL0y45PUZ07cgnzKSpBWofuTdBJ6eYbUoneudSc10cuDolfAft16yZGjNteXbIBC0611AWFLj/30f1dIkBYZWMGWxtt9BIRmzdLQQWIM1VWUOGjKWIq5DHkFGl+p2F8int+hP8oAMJAAYkyJejx5NcDJ/PUe4ICF6RD9clpvtpJI3Ze+6MKeY434WgpGvex2zZnCQAn+org5CVGM/sUnpdplCeFMmSeNAlp2bBifuKE6j3njG4AmkNAfs6Ui8KrcgUd06fxQc+f0balqF48YNOEzUDaLU0XLL9n9ycUc1vBgQ38Js5OuNjCgk08FNHNqWerFu/EnZuRCaXCnZOPqA5Mf7Vp04Z6dE5cV5IggZ5Ju61avLJwr3l9HR8U/IeqoqzKn4PzeU+PCALWjs1yYwtlcStKZRwE6vRo8H716uCU81AOWo+Ky/LZ23Lz0+nMMPCkThxUBaRoibDHtK3XwC78zceM2a10J5qYZsHnONk2pRUS3Izm4d+QeGYsJ8pgQ597dcOTgnH+E6i+fLwIg/2G1j3wGBuPludP2V90zs4NqHyHoNAYCSg3veq8syNoVC3XjbgAVscLDcHeFVnsC5K7ZdePP81oM9bs6S2CYOZ1hucT3UPmmTgumd/YKzx7akV+x9XFPey0XbCWQdGw5Ih4FakII8/rwS4xBRggj5Cc1xmfSWwk30XtBq1v4gEyCqQ6bMU1eF1KJTKFfcleXkkiygu5CekyueB9tSWJn0Y/3gInHhkTMGTZxcg23PszVP8ptg9pwTryYDo04JAEwrSpU+33gqzZ5SDq3wfg/f5sFyp5dgzJV+xVAoqf4kY255SpMtuNbXOzarm30bYBJpgSzrw4kjLP/BUwdZ7je0YFol+gqwB8vgxacpdu5hDjbn5EhCjDPDM5DN3V+Mafz3MySey6+BhU3CM6rZ/qq8ZDLs3+gZ6xG8RJI3XDBVeSDofE7C4aOB7qFmvFINx7fYisY9TeOABA//2iWIA7mojLUBE9InYOVSla2SVyLuWez1OPlhI81bc7af4mYhx2irszRCO2QBxi42T8rncda9Ef8POn1AYQFX1vbTzDaMwgTRgt3i6PRkNWw0r1Y2Z7qXAlvsoOBl56VhmGThYLwxXYv6tAjfhZskyzARtbhbpyhGVt/Ib9xtTFXFzV84LPbX+SFscNQewq9M/zw0XeJ4BFxLsLS9vLvnYqtaTrhItFeIFpYO9Z3t2OAY8EXD2EChow3bn2SrIDFdvRvv5ABFyRJmPyqLIDJu9saYv+JfDR1Fe/C2jVnUyLUMZ/8koC+uRGxauChNlf04vD9/xdITtRHJlPlPPJ8cMiBEI9LwhmmB5cMgLo19y7nNLuQ0UL04fSajSjgAcMj30C9sito8NQ53w7zF9F9tGm1FHpE9YE0KM6ThM20bageqSOqR3mPFrJxiLqZYvqy7/AF6CLrrmqTZgS7PoqiO/29zNmUO9WsaNQfzpOIBcDq0GCnZbp2fhx1xjMMC4JWIp4+HZh7atrP6/6IkqKmZQXf0pc+zrPrmV/ELFMKO2SSprmh1O+Pgv8Vga5RGjQKYUMEiDrXAtwEKkBOW20DVueZsxLCzcmwOq02TuX7iVBpi0iLar+kxGjkdlgJG+SNI7j8+ttPJAuGWohbPRLJg4UdddTODt5SvrF/yUZv02RAH7TyRvNjstrPhqkoCR0wg7694slCjLAfyn359DLfDvTtmRg4/qSMNdckylPTHoJKL6idnG8p7S1ACT8c6fn2SghXdHSFLfDeiZlVK68O/f46FNADcZfPiZlKqYDt2Pv1YLzyg69rsIOoeiFOSZYLbgDjkqqTfvqRsnCoEbg+oAwASzoK/iKgubiceWrK0/bWqXBD9AqxmfJ3GCTHpvlCPSojgZSq982dxpZZAeoamzzXRDvnF86zuOewldMq4m8x1atXvkrXiW/4BbyEPg5KAAg/W5m2vfeSH+ciGz9dRx+mSbyH096dQsAGZIX85mwG0IzBDW6yOcoe9P0VHerji7Q6WkyUjXNGKfUNCUkaa/XzG+LvWWo3n9jknx0SHBiLl0+MX9vtmBg+vQzDevf6GUDxLgf/bn7Xi3mK7avNWGYvwhAH9agIUDAQcSwngn2+x/s6L1DIeb1hVkbWQQbvethFaZDOp8THo8ndx6QXD42FMHA6yivfqXzHUuG8WmrbiGwlPYdtWWGIH67lG3f4+YWLRlH0X2l3zFP5u6LvRWyxA5usQDWeBaq6N3bgs6/aXnIiTMNL381ImiUHyX4CrA6w/aVKiaeeLRfXj0DMzFz9RKXqN12JTDwD5ADJYxjL9+FFfFITnrZL5VvtyHdWCTWKNuAPq4N9vluI99bJ14kBH0wCotL1uqQi/JcUDwYW+rsMZblctvQUJ+Pl773KaQA5zXes8lmykgL1ELrMFLMHbG2eCPviqTtyBd/HgvFkux9isZH5W3tEJsMJfPOF2CuliVaQmJ1LY3dqqO4ZCD1hMJUXrxlhYsEGhRMxYGZj/Zm4WE1iDKlVFnjIc0ro8hYczboc/KFX55xqq9ifP8aq7LqkOl+HYH/0/Td8oAWpvzbU1bt/a1ep1xviUBQKeDhOop4dB0IzOgsIYFtD12flPmpDzGbovXLulGR5Z0h5fIxFqCrv8QuzGfMKBOsLMiAqegHLcetNJ6+GpK/WJdYH1W7oJ5pidFneoFOUQZxvZadpKnpvzCw0U5aYbaj0BmqsWYEWQLUMUF9AmmmV2NpBADow6e/9umRJUh8kfxyIwcy0grDc0sVfSwojkp+E7N/wS300o8C1S9vrozUiHKSg6Lhpa7/tAHMNMKKVik7cVAbLTHOQJuWALRHIcPOU+f4TO1gkq1ZBYojNc5tBaenORlNEzkboPgvpiBHGAs0aV1O+k8GQDqhsoZv3zBTADZrNRmbJoVcll23FsieNnl3aB/cTCbimIoSweYEL34VVlUnDlZ1ydt1S2fY4/Vnh46lgEYGRPs3ZgTZrFBrdkdAFvtTpFEyZuR9rhMlLigVlq+NODMfccEfiZr6sZ+qxllMfZSeOFJ8bpKyJd4lOXsxzI6DQRjcMT+JSS5z2jcYOfDbgvaZ+j8iRV01rByHlboAYR0DkBnRcDVg2x5idFeHC4edPjEn94ZdOqwA5BlthxNVINNGC/8vrNO7JGOckvk8tzA5Ms6u3H7qr5Z8w5Hstf0//Ed7SgvPfNtmuwVs+/3lLAffhPn+l0gfEkKLcri1m4N3HaZxaHSUBhWBd1H+T1zuO+kH+tPvjjobd1Qgx8EaavtVD3ryCZ1dwHECyn6QIwByNxasRYoOOP6AYIoVP2ZguzPAkxZg4+BlJW8QzZxe+o/a2Yp2Fgec5kdUcIyrwqWua3JfbKG3Iotj7aGbb/ckCuckrElFoY3I+48+ev2AHMR1aXpi77oxN/himJNUwoQghfQUmGw51HP6QNuiap64JhjGffC8W/Rr0pVBmnWCiNnHNQzKIXVvYzzMUoFmZJ+aRmFJ4dUfcDtKgQm4Ra9I3AaUk8IPxLeopq+p6GEp9d7ydUF+wwprx2kXYPUEoShRn1vVkhol1BWKLcXcsVScDA0lGnLRGDTsNtPafO26oQ7KIWZdXeUgqbkixCFuDD8b2WbGR7/GWoGCkHVPodgvGGvW52//7wWgOLh/I3S4yiRPc2ZsUAqDnNbiOOfqA85DjqCJJBBiB5XfypHCfwEqLsNvJpPlHG8yfuKL8aiTYksT8aE4xcdEk4F3UU6whLbKpPDKSllVSlevH8m07uDcIkOpqYxnJrAW0Jn2ZldzFcNFD9pGNmKDDMAKZWbouftsf6DCb9HwhvN+eJYe8qjnWcLaDvKb21iqDAeRhm8HdvjKQcyJd6ZwaDMUKN8ofe5P425TQZvfvSkYxOFNvb6ud4KrC0CzvXq2oDS6byJSsFItuIaCLupLMwiPWecQQi4lhb4CeAqJrzTchiVqsPggb1X6FUjgrn6+JHuhxldvawt8QFnyRyz/i0Nq3yJkSkzKaw66ClO/FOY7dydnjA9RaUl+LuOicjNI8MubAKKBr66WMqDfPrMHOYAxaIVM4xUBbFDJQAfI6GK+213fRpuqeaZZz3WhntIAC3n4KqS3VUFTZz/y3J1GWcfrPFUN/WvxGiMBL7UF2yDCg215xQq0NuO4eSQzRON2KWEdtpcPKfoMmJE9Ho5nYztJ955jL30DhTiJRM0k1MMJMYM3k2uFDB9hwVZxsKOh87WXa3KHErRZBastQniWLblwzOx+BC+l5ivAK0HuddY97bGt0+T+kYPLWNonWMLrpQ6ps0zOItui9oVs6fbqOy+f4VooyOuSyJAsQW4PFFohjjT1y6FGnvrhiNpRb81KLrGD6ti9mUX2ldvUUbqiVuQa7G9WcvbAy1Y02SPphrzMCG6xJSUI+PUu0hnH/Zn9VdCN8IXxku6mB/znfE3hUCK+tnx54UHEYPYK3ABoDi7UfMwxRAIrbJDOBW2lH5g7GNRQ5Wcsd037YNyUmq1927HP2wP0l/gQDwoAgVDjX+8y468QnUhCWsCUYb+spfQLbxGpJ9zPfuwUItpvNLxZmFU5mWScc0rA+Vpbl/51FQfkDlnK88CsBKw+9P0oatpzDnz369dnfRbddrXAfK1dUl8AcTMwniETrPeSrEz+XYZt+eZpcPocSFnww84KJxpjB7auASI0Q7PmDtZomiL3PZSIzfAU982q1IkcbpwGrsd3Pg+vmhLvL3y2jwZPYiUu6vDWFHxSrwo0Tp4Aw3GlAys4+9jzc7FUflt/t6uRsInhL/rmtn1LwKSsC/9u3Em+D2sFDY03eeuuVgsfhpfMR8zQF4YgrlY5AvWotyW9g+eJbrjkiNEHYI7xaETICkmpeQ/C70IdYhrpqZbEBhjsFlGXmIurbAyAAA" alt="Post 1" class="img-fluid">
+            <footer class="p-2">
+                <p><strong>200.000 likes</strong><br>Inserte contenido de 4geeks para poder rellenar este espacio y no tener que escribir un post diferente por cada imagen</p>
+            </footer>
+        </div>
+        <div class="post border">
+            <header class="d-flex justify-content-between align-items-center p-2">
+                <span class="fw-bold">Título de la Foto</span>
+                <span class="text-muted">01/01/2025</span>
+            </header>
+            <img src="https://www.gratistodo.com/wp-content/uploads/2016/09/caballo-marron-fondo-hd.jpg" alt="Post 1" class="img-fluid">
+            <footer class="p-2">
+                <p><strong>200.000 likes</strong><br>Inserte contenido de 4geeks para poder rellenar este espacio y no tener que escribir un post diferente por cada imagen</p>
+            </footer>
+        </div>
+        <div class="post border">
+            <header class="d-flex justify-content-between align-items-center p-2">
+                <span class="fw-bold">Título de la Foto</span>
+                <span class="text-muted">01/01/2025</span>
+            </header>
+            <img src="https://th.bing.com/th/id/R.22c4c7d02597efa4479aa2e3707bf428?rik=vAZRUiJ9eJPBFQ&pid=ImgRaw&r=0" alt="Post 1" class="img-fluid">
+            <footer class="p-2">
+                <p><strong>200.000 likes</strong><br>Inserte contenido de 4geeks para poder rellenar este espacio y no tener que escribir un post diferente por cada imagen</p>
+            </footer>
+        </div>
+        <div class="post border">
+            <header class="d-flex justify-content-between align-items-center p-2">
+                <span class="fw-bold">Título de la Foto</span>
+                <span class="text-muted">01/01/2025</span>
+            </header>
+            <img src="https://th.bing.com/th/id/R.1bd5a06248250d16e156066fb592fff0?rik=GT5zCsFOcJCeCw&riu=http%3a%2f%2f2.bp.blogspot.com%2f-sDfRuqiTHoQ%2fUszun4sa5JI%2fAAAAAAAAEto%2fSS6yCKmNJ9k%2fs1600%2fimagenes%2bhermosas%2b2.jpg&ehk=3rPC0SL0LraOUyoIY5HIqUopV1UX4xQ6hoePdmqstqI%3d&risl=&pid=ImgRaw&r=0" alt="Post 1" class="img-fluid">
+            <footer class="p-2">
+                <p><strong>200.000 likes</strong><br>Inserte contenido de 4geeks para poder rellenar este espacio y no tener que escribir un post diferente por cada imagen</p>
+            </footer>
+        </div>
+        <div class="post border">
+            <header class="d-flex justify-content-between align-items-center p-2">
+                <span class="fw-bold">Título de la Foto</span>
+                <span class="text-muted">01/01/2025</span>
+            </header>
+            <img src="https://3.bp.blogspot.com/-1POmziEQs4w/UnuuLBkbTzI/AAAAAAAADt8/y6P9WED9keY/s1600/Im%C3%A1genes+Con+Frases+De+Amor+En+El+Universo+Muy+Lindas+(3).jpg" alt="Post 1" class="img-fluid">
+            <footer class="p-2">
+                <p><strong>200.000 likes</strong><br>Inserte contenido de 4geeks para poder rellenar este espacio y no tener que escribir un post diferente por cada imagen</p>
+            </footer>
+        </div>
+        <div class="post border">
+            <header class="d-flex justify-content-between align-items-center p-2">
+                <span class="fw-bold">Título de la Foto</span>
+                <span class="text-muted">01/01/2025</span>
+            </header>
+            <img src="https://3.bp.blogspot.com/-ufXByPQWHUw/U6Mwd0tk16I/AAAAAAACO0Q/txt2eIYlGQg/s1600/bosque+junto+al+lago+lake+and+forest.jpg" alt="Post 1" class="img-fluid">
+            <footer class="p-2">
+                <p><strong>200.000 likes</strong><br>Inserte contenido de 4geeks para poder rellenar este espacio y no tener que escribir un post diferente por cada imagen</p>
+            </footer>
+        </div>
+        
+    </div>
+    <style>
+       
+        
+        .grid-view {
+        gap: 10px; 
+        justify-content: center;
+    }
+    .grid-view .post:nth-last-child(-n+3) footer {
+    display: none; 
+}
+    #gridViewBtn, #listViewBtn {
+        border: none; 
+        box-shadow: none; 
+    }
+    .header-container {
+        border: none;
+        background-color: #f8f9fa;
+        box-shadow: none;
+    }
+        .grid-view .post {
+            margin: 0; 
+            padding: 0; 
+            width: calc(30.333%); 
+            height: 0;
+            padding-top: 30.333%;
+            position: relative; 
+        }
+    
+        .grid-view .post img {
+            position: absolute; 
+            top: 0;
+            left: 0;
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+        }
+    
+        .grid-view .post span {
+            display: none;
+        }
+    
+        
+        .cascade-view .post {
+            width: 50%; 
+            margin: 0 auto 1rem auto;
+            padding: 1rem;
+            height: auto; 
+        }
+    
+        .cascade-view .post img {
+            width: 100%; 
+            height: auto; 
+        }
+    
+        .cascade-view .post span {
+            display: block; 
+        }
+    </style>
+    <script>
+        const gridViewBtn = document.getElementById('gridViewBtn');
+        const listViewBtn = document.getElementById('listViewBtn');
+        const postsContainer = document.getElementById('postsContainer');
+    
+       // Cambiar a vista de cuadrícula
+// Cambiar a vista de cuadrícula
+gridViewBtn.addEventListener('click', () => {
+    postsContainer.classList.remove('cascade-view', 'd-flex', 'flex-column');
+    postsContainer.classList.add('grid-view', 'd-flex', 'flex-wrap');
+    const posts = document.querySelectorAll('.post');
+    posts.forEach(post => {
+        post.style.width = ""; 
+        post.style.height = "";
+        post.style.margin = ""; 
+    });
+
+    
+    const footers = document.querySelectorAll('.post footer');
+    footers.forEach((footer, index) => {
+        if (index >= footers.length - 3) {
+            footer.style.display = 'none'; 
+        }
+    });
+});
+
+listViewBtn.addEventListener('click', () => {
+    postsContainer.classList.remove('grid-view', 'flex-wrap');
+    postsContainer.classList.add('cascade-view', 'd-flex', 'flex-column');
+    const posts = document.querySelectorAll('.post');
+    posts.forEach(post => {
+        post.style.width = "50%"; 
+        post.style.margin = "0 auto 1rem auto"; 
+    });
+
+    // Mostrar todos los footers
+    const footers = document.querySelectorAll('.post footer');
+    footers.forEach(footer => {
+        footer.style.display = ''; 
+    });
+});
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
